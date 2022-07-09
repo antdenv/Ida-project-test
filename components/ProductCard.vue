@@ -13,8 +13,6 @@
 </template>
 
 <script>
-import priceTransform from '../utils/priceTransform';
-
 export default {
   props: {
     product: Object,
@@ -22,7 +20,7 @@ export default {
   },
   computed: {
     priceTransformed() {
-      return priceTransform(this.product.price);
+      return this.product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
     },
   },
 };

@@ -2,7 +2,7 @@
   <div class='form'>
     <div class='form__container' v-if='!isComplete'>
         <form-input
-            :info='formInfo.title'
+            :info='formInfo.name'
             field='name'
             placeholder='Наименование товара'
             title='Наименование товара'
@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       formInfo: {
-        title: {
+        name: {
           isError: false,
           value: '',
         },

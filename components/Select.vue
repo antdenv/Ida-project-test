@@ -1,24 +1,22 @@
 <template>
     <div class='wrapper'>
         <button v-on:click='onButtonClick' class='wrapper__select'>
-            {{ title || 'По умолчанию' }}
+            {{ title }}
         </button>
         <div v-if='isOpen' class='wrapper__options'>
             <p
                 class='options__value'
-                v-for='item in options'
-                :key='item.title'
-                v-on:click='onSelectOption($event, item)'
+                v-for='option in options'
+                :key='option.title'
+                v-on:click='onSelectOption(option)'
             >
-                {{ item.title }}
+                {{ option.title }}
             </p>
         </div>
     </div>
 </template>
 
 <script>
-import options from '../utils/selectOptions';
-
 export default {
   props: {
     action: Function,
@@ -27,17 +25,30 @@ export default {
     return {
       isOpen: false,
       title: 'По умолчанию',
-      options,
+      options: {
+        name: {
+          value: 'name',
+          title: 'По наименованию',
+        },
+        minPrice: {
+          value: 'minPrice',
+          title: 'По убыванию цены',
+        },
+        maxPrice: {
+          value: 'maxPrice',
+          title: 'По возрастанию цены',
+        },
+      },
     };
   },
   methods: {
     onButtonClick() {
       this.isOpen = !this.isOpen;
     },
-    onSelectOption(event, item) {
+    onSelectOption(option) {
       this.isOpen = false;
-      this.title = item.title;
-      this.action(item.option);
+      this.title = option.title;
+      this.action(option.value);
     },
   },
 };
