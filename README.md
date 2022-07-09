@@ -1,7 +1,8 @@
 # Тестовое задание idaproject
 
-.[Описание тестового задания].(https://idaproject.notion.site/Frontend-developer-test-9b834d020d8f406f851479791209beef)
-.[Макет в Figma].(https://www.figma.com/file/kIuVw6nSk218pi9iE98iq5/Junior-frontend-developer-test?node-id=4%3A365)
+[Описание тестового задания](https://idaproject.notion.site/Frontend-developer-test-9b834d020d8f406f851479791209beef)
+
+[Макет в Figma](https://www.figma.com/file/kIuVw6nSk218pi9iE98iq5/Junior-frontend-developer-test?node-id=4%3A365)
 
 Данное приложение - мой первый опыт работы с Vue и сборщиком Nuxt.js. Раньше работала только с ReactJS, Vue показался немного похожим и не очень сложным на таком уровне. 
 
